@@ -50,6 +50,11 @@ public class Main {
                     System.out.println("Enter employee's info: ");
                     System.out.print("Enter id: ");
                     String id = sc.nextLine();
+                    Employee employeeeAdd = manageEmployee.getEmployeeList().stream().filter(employee1 -> employee1.getId().equals(id)).findAny().orElse(null);
+                    if(employeeeAdd != null){
+                        System.out.println("Error. ID is already existed!");
+                        break;
+                    }
                     System.out.print("Enter full name: ");
                     String fullName = sc.nextLine();
                     System.out.print("Enter birthday(yyyy-mm-dd): ");

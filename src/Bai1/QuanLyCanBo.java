@@ -16,7 +16,7 @@ public class QuanLyCanBo {
     }
 
     public List<CanBo> timCanBoTheoTen(String name){
-        return this.canBoList.stream().filter(canBo -> name.contains(canBo.getName())).collect(Collectors.toList());
+        return this.canBoList.stream().filter(canBo -> name.toLowerCase().contains(canBo.getName().toLowerCase())).collect(Collectors.toList());
     }
 
     public void hienThiDanhSach(){

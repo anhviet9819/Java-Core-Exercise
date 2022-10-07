@@ -1,5 +1,6 @@
 package Bai13.Model;
 
+import javax.annotation.Generated;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;

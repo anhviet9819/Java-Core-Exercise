@@ -1,14 +1,20 @@
 package Bai13.Model;
 
-import Bai12.Xe;
-import Bai9.BienLai;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ManageEmployee {
     public List<Employee> employeeList;
+
+    public List<Employee> getEmployeeList() {
+        return employeeList;
+    }
+
+    public void setEmployeeList(List<Employee> employeeList) {
+        this.employeeList = employeeList;
+    }
+
     public ManageEmployee(){
         this.employeeList = new ArrayList<>();
     }
@@ -16,7 +22,7 @@ public class ManageEmployee {
         Employee employeeeAdd = employeeList.stream().filter(employee1 -> employee1.getId().equals(employee.getId())).findAny().orElse(null);
         if(employeeeAdd == null){
             this.employeeList.add(employee);
-            System.out.println("Add employeee successfully!");
+            System.out.println("Add employee successfully!");
         }else{
             System.out.println("Error. ID is already existed!");
         }
